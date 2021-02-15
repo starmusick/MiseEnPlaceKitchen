@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://star:star123@mepkfiles.mio6b.mongodb.net/mepkfiles?retryWrites=true&w=majority",
+    "jwtSecret": "mepk_secret"
+}
