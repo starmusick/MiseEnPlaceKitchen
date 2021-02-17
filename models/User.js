@@ -10,7 +10,7 @@ const UserSchema = new Schema({
     },
     user_name: {
         type: String,
-        require: false
+        require: true
     },
     user_password: {
         type: String,
@@ -18,7 +18,7 @@ const UserSchema = new Schema({
     },
     user_category: {
         type: Array,
-        require: true
+        require: false
     },
     user_created: {
         type: Date,
