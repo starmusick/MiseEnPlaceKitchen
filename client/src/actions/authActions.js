@@ -71,7 +71,7 @@ export const register = ({ user_name, user_email, user_password, user_category }
   // Request body
   const body = JSON.stringify({ user_name, user_email, user_password, user_category });
 
-  axios.post('/api/auth/register', body, config)
+  axios.post('/api/users', body, config)
     .then(res => dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
