@@ -45,12 +45,13 @@ export const login = ({ user_email, user_password }) => dispatch => {
 	const body = JSON.stringify({ user_email, user_password });
 
 	axios.post('/api/auth/', body, config)
-		.then(res =>
+		.then(res => {
 			dispatch({
 				type: LOGIN_SUCCESS,
 				payload: res.data,
-			})
-		)
+			});
+			dispatch(loadUser());
+		})
 		.catch(err => {
 			dispatch(
 				returnErrors(

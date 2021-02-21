@@ -29,9 +29,14 @@ export default function (state = initialState, action) {
 			};
 		case ADD_ITEM:
 		case EDIT_ITEM:
+			const previousItems = [...state.items];
+			const itemIndex = previousItems.findIndex(
+				item => item._id === action.payload.id
+			);
+			previousItems[itemIndex] = action.payload;
 			return {
 				...state,
-				items: [action.payload, ...state.items],
+				items: previousItems,
 			};
 		case ITEMS_LOADING:
 			return {

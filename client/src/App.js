@@ -14,6 +14,9 @@ class App extends Component {
 	componentDidMount() {
 		store.dispatch(loadUser());
 	}
+	componentDidUpdate() {
+		store.dispatch(loadUser());
+	}
 
 	render() {
 		return (
