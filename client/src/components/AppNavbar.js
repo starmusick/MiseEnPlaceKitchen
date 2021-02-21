@@ -49,15 +49,10 @@ class AppNavbar extends Component {
         const guestLinks = (
             <Fragment>
                 <NavItem>
-                    <span className="navbar-text mr-3">
-                        <strong>Please Register or Login to Continue</strong>
-                    </span>
+                    <LoginModal />
                 </NavItem>
                 <NavItem >
                     <RegisterModal />
-                </NavItem>
-                <NavItem>
-                    <LoginModal />
                 </NavItem>
             </Fragment>
         )
