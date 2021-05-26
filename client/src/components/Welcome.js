@@ -48,6 +48,7 @@ class Welcome extends Component {
 							<p>
 								<span className='mr-3 mb-3'>
 									<Button
+										outline
 										color='info'
 										style={{
 											marginBottom: '2rem',
@@ -56,6 +57,7 @@ class Welcome extends Component {
 										<RegisterModal />
 									</Button>
 									<Button
+										outline
 										color='success'
 										style={{
 											marginBottom: '2rem',

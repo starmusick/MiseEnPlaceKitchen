@@ -48,16 +48,17 @@ export const deleteItem = id => (dispatch, getState) => {
 		);
 };
 
-export const editItem = id => (dispatch, getState) => {
-	axios.put(`/api/items/${id}`, tokenConfig(getState))
+export const editItem = item => (dispatch, getState) => {
+	console.log(`editItem`, { item });
+	axios.put(`/api/items/${item.id}`, item, tokenConfig(getState))
 		.then(res =>
 			dispatch({
 				type: EDIT_ITEM,
-				payload: id,
+				payload: item,
 			})
 		)
 		.catch(err =>
-			dispatch(returnErrors(err.respons.date, err.response.status))
+			dispatch(returnErrors(err.response.date, err.response.status))
 		);
 };
 
